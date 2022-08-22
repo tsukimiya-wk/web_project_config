@@ -1,0 +1,26 @@
+{
+  "name": "web_project_config",
+  "version": "1.0.0",
+  "description": "Web工程项目开发配置",
+  "scripts": {
+    "cm": "cz",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "tsukimiya-kk",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "3.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
