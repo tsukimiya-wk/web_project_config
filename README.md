@@ -72,7 +72,8 @@ pnpm dlx husky-init && pnpm i
 npx husky add .husky/pre-commit "npx lint-staged"
 
 # 使用 commitlint 检查提交信息
-npx husky add .husky/commit-msg "npx --no -- commitlint --edit '$1'"
+# 必须使用双引号包裹住 $1
+npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
 
 # 使用 commitizen 代替 git commit
 npx husky add .husky/prepare-commit-msg "exec < /dev/tty && npx cz --hook || true"
