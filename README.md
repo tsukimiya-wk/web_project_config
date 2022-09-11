@@ -26,13 +26,17 @@ pnpm i -D eslint eslint-plugin-vue
 pnpm i -D -E prettier
 pnpm i -D eslint-config-prettier eslint-plugin-prettier
 pnpm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-pnpm i -D sass stylelint postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
+pnpm i -D sass stylelint postcss postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
 pnpm i -D lint-staged
 pnpm i -D @commitlint/cli @commitlint/config-conventional
 pnpm i -D commitizen
 pnpm i -D -E cz-conventional-changelog
 pnpm dlx husky-init && pnpm i
 ```
+
+注意：
+
+命令 `pnpm dlx husky-init` 无法在 MacOS 创建文件夹，可以先手动创建 `.husky` 文件夹，再执行该命令
 
 ### 2. 生成配置文件
 

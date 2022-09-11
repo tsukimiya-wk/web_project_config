@@ -23,7 +23,7 @@ pnpm i -D stylelint
 配合 sass, vue， prettier 使用
 
 ```bash
-pnpm i -D sass stylelint postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
+pnpm i -D sass stylelint postcss postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
 ```
 
 配置文件如下
