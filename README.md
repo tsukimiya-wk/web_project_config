@@ -26,8 +26,7 @@ pnpm i -D eslint eslint-plugin-vue
 pnpm i -D -E prettier
 pnpm i -D eslint-config-prettier eslint-plugin-prettier
 pnpm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-pnpm i -D sass, stylelint, stylelint-config-standard-scss, stylelint-config-recommended-vue-scss,
-stylelint-config-prettier-scss
+pnpm i -D sass stylelint stylelint-config-standard-scss stylelint-config-recommended-vue-scss stylelint-config-prettier-scss
 pnpm i -D lint-staged
 pnpm i -D @commitlint/cli @commitlint/config-conventional
 pnpm i -D commitizen

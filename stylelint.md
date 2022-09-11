@@ -19,8 +19,7 @@ pnpm i -D stylelint
 配合 sass, vue， prettier 使用
 
 ```bash
-pnpm i -D sass, stylelint, stylelint-config-standard-scss, stylelint-config-recommended-vue-scss,
-stylelint-config-prettier-scss
+pnpm i -D sass stylelint stylelint-config-standard-scss stylelint-config-recommended-vue-scss stylelint-config-prettier-scss
 ```
 
 配置文件如下
