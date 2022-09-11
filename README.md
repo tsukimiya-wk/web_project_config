@@ -26,7 +26,7 @@ pnpm i -D eslint eslint-plugin-vue
 pnpm i -D -E prettier
 pnpm i -D eslint-config-prettier eslint-plugin-prettier
 pnpm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
-pnpm i -D sass stylelint stylelint-config-standard-scss stylelint-config-recommended-vue-scss stylelint-config-prettier-scss
+pnpm i -D sass stylelint postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
 pnpm i -D lint-staged
 pnpm i -D @commitlint/cli @commitlint/config-conventional
 pnpm i -D commitizen
@@ -53,12 +53,13 @@ pnpm dlx husky-init && pnpm i
 
 #### 2.2 配置 eslint, stylelint, prettier
 
-从 `config` 文件夹下拷贝下列八个文件到新项目的根目录里
+从 `config` 文件夹下拷贝下列 9 个文件到新项目的根目录里
 
 -   .editorconfig
 -   .eslintrc.json
 -   .eslintignore
 -   .stylelintrc.json
+-   .stylelintignore
 -   .prettierrc.json
 -   .prettierignore
 -   .lintstagedrc.json

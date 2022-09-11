@@ -8,6 +8,10 @@
 
 https://stylelint.io/
 
+https://www.npmjs.com/package/stylelint-config-standard-vue
+
+https://www.npmjs.com/package/stylelint-config-prettier
+
 ## 安装
 
 ```bash
@@ -19,7 +23,7 @@ pnpm i -D stylelint
 配合 sass, vue， prettier 使用
 
 ```bash
-pnpm i -D sass stylelint stylelint-config-standard-scss stylelint-config-recommended-vue-scss stylelint-config-prettier-scss
+pnpm i -D sass stylelint postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
 ```
 
 配置文件如下
@@ -30,8 +34,8 @@ pnpm i -D sass stylelint stylelint-config-standard-scss stylelint-config-recomme
 {
     "extends": [
         "stylelint-config-standard-scss",
-        "stylelint-config-recommended-vue/scss",
-        "stylelint-config-prettier-scss"
+        "stylelint-config-standard-vue/scss",
+        "stylelint-config-prettier"
     ]
 }
 ```
