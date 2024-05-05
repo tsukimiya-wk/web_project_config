@@ -55,6 +55,15 @@ pnpm dlx husky-init && pnpm i
 }
 ```
 
+2024 年 5 月 5 日更新：使用".czrc"文件来代替"package.json"中的"config"字段
+
+```rc
+<!-- .czrc -->
+{
+    "path": "cz-conventional-changelog"
+}
+```
+
 #### 2.2 配置 eslint, stylelint, prettier
 
 从 `config` 文件夹下拷贝下列 9 个文件到新项目的根目录里

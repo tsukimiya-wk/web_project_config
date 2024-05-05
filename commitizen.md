@@ -48,6 +48,15 @@ pnpm i -D -E cz-conventional-changelog
 }
 ```
 
+2024 年 5 月 5 日更新：使用".czrc"文件来代替"package.json"中的"config"字段
+
+```
+// .czrc
+{
+    "path": "cz-conventional-changelog"
+}
+```
+
 使用 `npm run cm` 代替 `git commit` 命令
 
 运行 `npm run cm`，根据提示生成符合 commit 规范的提交信息
