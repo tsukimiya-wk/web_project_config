@@ -33,8 +33,19 @@ npx husky add .husky/commit-msg "npx --no -- commitlint --edit '$1'"
 npx husky add .husky/prepare-commit-msg "exec < /dev/tty && npx cz --hook || true"
 ```
 
+在 CI/CD、GitHub Actions 等非交互式环境，需要添加下列代码
+
+```bash
+if [ -t 1 ]; then
+    # 此处为要在交互式终端执行的命令
+else
+    exit 0
+fi
+```
+
 ## 其他
 
 -   [lint-staged](./lint_staged.md)
 -   [commitlint](./commitlint.md)
 -   [commitizen](./commitizen.md)
+-   [semantic-release](./semantic-release.md)

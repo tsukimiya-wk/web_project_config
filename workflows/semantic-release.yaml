@@ -1,0 +1,41 @@
+name: Release
+on:
+    push:
+        branches:
+            - develop
+            - main
+    pull_request:
+        branches:
+            - main
+permissions:
+    contents: write # 允许 checkout
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write # 允许发布到 GitHub release
+            issues: write # 允许对已发布的问题发表评论
+            pull-requests: write # 允许对已发布的拉取请求发表评论
+            id-token: write # 允许将 OIDC 用于 npm 来源
+        steps:
+            # 1. 检出代码
+            - name: Checkout code
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0 # 需要完整历史记录以分析提交信息
+
+            # 2. 设置Node.js环境
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            # 3. 安装依赖
+            - name: Install dependencies
+              run: npm install
+
+            # 4. 运行 semantic-release
+            - name: Run semantic-release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npx semantic-release
