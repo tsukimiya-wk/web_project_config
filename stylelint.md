@@ -23,7 +23,7 @@ pnpm i -D stylelint
 配合 sass, vue， prettier 使用
 
 ```bash
-pnpm i -D sass stylelint postcss postcss-html stylelint-config-standard-scss stylelint-config-standard-vue stylelint-config-prettier
+pnpm i -D sass stylelint postcss postcss-html stylelint-config-standard-scss stylelint-config-standard-vue
 ```
 
 配置文件如下
@@ -34,8 +34,7 @@ pnpm i -D sass stylelint postcss postcss-html stylelint-config-standard-scss sty
 {
     "extends": [
         "stylelint-config-standard-scss",
-        "stylelint-config-standard-vue/scss",
-        "stylelint-config-prettier"
+        "stylelint-config-standard-vue/scss"
     ]
 }
 ```
@@ -54,3 +53,5 @@ pnpm i -D sass stylelint postcss postcss-html stylelint-config-standard-scss sty
   ]
 }
 ```
+
+2024 年 5 月 5 日更新：删除了"stylelint-config-prettier"，[stylelint≥15 已废弃了该插件](https://stylelint.io/migration-guide/to-15#deprecated-stylistic-rules)
