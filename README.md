@@ -73,7 +73,7 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 
 #### 2.2 配置 eslint, stylelint, prettier
 
-从 `config` 文件夹下拷贝下列 9 个文件到新项目的根目录里
+从 `config` 文件夹下拷贝下列文件到新项目的根目录里
 
 -   .editorconfig
 -   .eslintrc.json
