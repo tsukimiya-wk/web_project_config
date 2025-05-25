@@ -27,7 +27,7 @@ pnpm i -D @commitlint/config-conventional
 2025 年 5 月 25 更新：将 commonjs 改为 ES 模块
 
 ```js
-// commitlint.config.js
+// commitlint.config.mjs
 // module.exports = {
 //     extends: ["@commitlint/config-conventional"],
 // };
@@ -37,6 +37,8 @@ export default {
 ```
 
 ## 报错
+
+必须是 `mjs`
 
 > Node v24 改变了模块的加载方式，这包括 commitlint 配置文件。如果你的项目中不包含 package.文件，commitlint 可能无法加载配置，导致出现“请向您的 commitlint.config.js 文件中添加规则”的错误信息。可以通过以下两种方式之一来修复这个问题：
 >

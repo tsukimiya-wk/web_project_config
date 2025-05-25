@@ -95,6 +95,8 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 
 2025 年 5 月 25 日更新：从 Node v24 开始，node.js 改变了加载模块的方式，因此 commitlint 的配置文件要么是 commitlint.config.mjs，package.json 声明字段 `"type": "module"`。
 
+实测，必须是 `commitlint.config.mjs` 才行，`"type": "module"` 无法生效
+
 下列钩子的执行顺序为: `pre-commit` -> `prepare-commit-msg` -> `commit-msg`
 
 ```bash
