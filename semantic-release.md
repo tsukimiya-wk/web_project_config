@@ -11,7 +11,7 @@ https://github.com/semantic-release/semantic-release
 ## 安装
 
 ```bash
-pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/git @semantic-release/github
+pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/npm  @semantic-release/git @semantic-release/github
 ```
 
 如果要发布到 npm，还需要安装 `@semantic-release/npm`
@@ -37,6 +37,7 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
                 "changelogFile": "CHANGELOG.md"
             }
         ],
+        "@semantic-release/npm",
         [
             "@semantic-release/git",
             {

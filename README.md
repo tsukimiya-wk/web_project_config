@@ -41,7 +41,7 @@ pnpm i -D @commitlint/cli @commitlint/config-conventional
 pnpm i -D commitizen
 pnpm i -D -E cz-conventional-changelog
 pnpm dlx husky-init && pnpm i
-pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/git @semantic-release/github
+pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/release-notes-generator @semantic-release/changelog @semantic-release/npm @semantic-release/git @semantic-release/github
 ```
 
 注意：
@@ -208,6 +208,7 @@ export default defineConfig({
                 "changelogFile": "CHANGELOG.md"
             }
         ],
+        "@semantic-release/npm",
         [
             "@semantic-release/git",
             {
