@@ -77,11 +77,8 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 
 -   .editorconfig
 -   .eslintrc.json
--   .eslintignore
 -   .stylelintrc.json
--   .stylelintignore
 -   .prettierrc.json
--   .prettierignore
 -   .lintstagedrc.json
 -   commitlint.config.js
 -   .czrc
