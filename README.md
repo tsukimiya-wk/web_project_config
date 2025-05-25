@@ -27,8 +27,11 @@
 
 ### 1. 安装命令
 
+2025 年 5 月 25 更新：使用 `pnpm create @eslint/config@latest` 生成配置文件
+
 ```bash {.line-numbers}
-pnpm i -D eslint eslint-plugin-vue
+# pnpm i -D eslint eslint-plugin-vue
+pnpm create @eslint/config@latest
 pnpm i -D -E prettier
 pnpm i -D eslint-config-prettier eslint-plugin-prettier
 pnpm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
@@ -76,7 +79,7 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 从 `config` 文件夹下拷贝下列文件到新项目的根目录里
 
 -   .editorconfig
--   .eslintrc.json
+-   ~~.eslintrc.json~~
 -   .stylelintrc.json
 -   .prettierrc.json
 -   .lintstagedrc.json
@@ -85,6 +88,8 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 -   .releaserc
 
 将 `workflows` 文件夹下的文件都拷贝到 `.github/workflows/` 下
+
+2024 年 5 月 25 日更新：从 ESLint 9.0.0 开始，需要使用 eslint.config.js 文件来配置，使用 `pnpm create @eslint/config@latest` 生成配置文件。
 
 #### 2.3 配置 husky
 

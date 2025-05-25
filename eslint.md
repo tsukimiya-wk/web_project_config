@@ -6,15 +6,37 @@
 
 ## 文档
 
-https://eslint.cn/docs/user-guide/getting-started
+https://eslint.org/
 
-## 安装
+## 新安装和配置
+
+从 ESLint 9.0.0 开始，`.eslintrc.json` 已无法使用，需要使用 `pnpm create @eslint/config@latest` 生成新的配置文件 eslint.config.js，无需手动配置
+
+```bash
+pnpm create @eslint/config@latest
+```
+
+prettier 配合 eslint 仍需配置
+
+```js
+// eslint.config.js
+const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
+
+module.exports = [
+    // Any other config imports go at the top
+    eslintPluginPrettierRecommended,
+];
+```
+
+---
+
+## 安装（已过时）
 
 ```bash
 pnpm i -D eslint
 ```
 
-## 配置
+## 配置（已过时）
 
 ```bash
 # 使用 @eslint/create-config 来生成配置文件
