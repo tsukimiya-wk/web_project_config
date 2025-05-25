@@ -2,6 +2,7 @@
     "name": "web_project_config",
     "version": "1.0.0",
     "description": "Web工程项目开发配置",
+    "type": "module",
     "scripts": {
         "cm": "cz",
         "prepare": "husky install"
@@ -10,8 +11,8 @@
     "author": "tsukimiya-kk",
     "license": "ISC",
     "devDependencies": {
-        "@commitlint/cli": "^17.0.3",
-        "@commitlint/config-conventional": "^17.0.3",
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
         "commitizen": "^4.2.5",
         "cz-conventional-changelog": "3.3.0",
         "husky": "^8.0.0",
