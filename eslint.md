@@ -20,15 +20,18 @@ prettier 配合 eslint 仍需配置
 
 ```js
 // eslint.config.js
-const eslintPluginPrettierRecommended = require("eslint-plugin-prettier/recommended");
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 
-module.exports = [
+export default defineConfig([
     // Any other config imports go at the top
     eslintPluginPrettierRecommended,
-];
+    // 下方为原有配置
+]);
 ```
 
 ---
+
+注意：下方的配置均已过时。
 
 ## 安装（已过时）
 
@@ -88,7 +91,7 @@ pnpm i -D typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
 ---
 
-配合 vue 使用
+配合 vue 使用（已过时）
 
 ```bash
 pnpm i -D eslint-plugin-vue

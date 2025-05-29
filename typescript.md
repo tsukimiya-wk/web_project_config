@@ -53,7 +53,9 @@ export default defineConfig({
 });
 ```
 
-## 与 eslint 联合使用
+## 与 eslint 联合使用(已过时)
+
+参考 [eslint](./eslint.md)。
 
 ```bash
 # 安装对应插件 - https://typescript-eslint.io/
