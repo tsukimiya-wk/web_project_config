@@ -155,6 +155,14 @@ fi
 
 #### 2.4 配置路径别名
 
+```
+更新：在 Vue3 项目中，不需要改变 tsconfig.json 文件，由 Volar 直接接管即可，需要在工作区禁止默认的 TS。
+
+在 VS Code 扩展里，输入 `@builtin typescript-language-features`，选择工作区禁用。
+
+注意：vite.config.ts 里仍需配置 resolve.alias
+```
+
 需要分别在 `tsconfig.json` 和 `vite.config.ts` 文件中设置
 
 ```json
