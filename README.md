@@ -86,6 +86,7 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 -   commitlint.config.js
 -   .czrc
 -   .releaserc
+-   tsconfig.json
 
 将 `workflows` 文件夹下的文件都拷贝到 `.github/workflows/` 下
 
