@@ -1,5 +1,3 @@
 {
-    "*.{scss,vue}": ["stylelint"],
-    "*.{js,ts,vue}": ["prettier --write .", "eslint"],
-    "*.md": ["prettier --write"]
+    "*.{md, css, js, jsx, ts, tsx, vue}": ["eslint ."]
 }

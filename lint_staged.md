@@ -27,9 +27,10 @@ npx husky add .husky/pre-commit "npx lint-staged"
 // .lintstagedrc.json
 
 {
-    "*.{scss,vue}": ["stylelint"]
-    "*.{js,ts,jsx,tsx,vue}": ["eslint --fix"],
-    "*.md": ["prettier --write"]
+    // "*.{scss,vue}": ["stylelint"],
+    // "*.{js,ts,jsx,tsx,vue}": ["eslint --fix"],
+    // "*.md": ["prettier --write"]
+    "*.{md, css, js, jsx, ts, tsx, vue}": ["eslint ."]
 }
 ```
 
