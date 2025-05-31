@@ -93,7 +93,9 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 
 ##### 2.2.1 配置 eslint
 
-prettier 配合 eslint 仍需配置
+prettier 配合 eslint 仍需配置。
+
+截止 2025 月 5 月 31 日，默认生成的，有处理 Vue 的 eslint.config.js 存在一定问题，需要修改配置。
 
 ```js
 // eslint.config.js
@@ -103,6 +105,14 @@ export default defineConfig([
     // Any other config imports go at the top
     eslintPluginPrettierRecommended,
     // 下方为原有配置
+    // 将下方配置修改为
+    // pluginVue.configs["flat/essential"],
+    {
+        files: ["**/*.vue"],
+        languageOptions: { parserOptions: { parser: tseslint.parser } },
+        // 移到这里来
+        extends: [pluginVue.configs["flat/essential"]],
+    },
 ]);
 ```
 
