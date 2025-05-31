@@ -91,6 +91,21 @@ pnpm i -D semantic-release @semantic-release/commit-analyzer @semantic-release/r
 
 2024 年 5 月 25 日更新：从 ESLint 9.0.0 开始，需要使用 eslint.config.js 文件来配置，使用 `pnpm create @eslint/config@latest` 生成配置文件。
 
+##### 2.2.1 配置 eslint
+
+prettier 配合 eslint 仍需配置
+
+```js
+// eslint.config.js
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+
+export default defineConfig([
+    // Any other config imports go at the top
+    eslintPluginPrettierRecommended,
+    // 下方为原有配置
+]);
+```
+
 #### 2.3 配置 husky
 
 2025 年 5 月 25 日更新：从 Node v24 开始，node.js 改变了加载模块的方式，因此 commitlint 的配置文件要么是 commitlint.config.mjs，package.json 声明字段 `"type": "module"`。
