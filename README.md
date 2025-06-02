@@ -191,8 +191,11 @@ fi
 
 需要分别在 `tsconfig.json` 和 `vite.config.ts` 文件中设置
 
+2025 年 6 月 2 日更新：在 tsconfig.json 设置别名无效，可以新设一个 `tsconfig.alias.json` 文件，在 `tsconfig.app.json` 文件中引入
+
 ```json
-// tsconfig.json
+// 非 Vue 项目: tsconfig.json
+// Vue 项目：tsconfig.alias.json
 {
     "compilerOptions": {
         "baseUrl": ".",
@@ -201,6 +204,15 @@ fi
         }
     }
 }
+```
+
+然后在 `tsconfig.app.json` 文件中引入
+
+```json
+// tsconfig.app.json
+"extends": ["@vue/tsconfig/tsconfig.dom.json", "./tsconfig.alias.json"],
+// 下面这行是项目自带的，改为上面的方法
+// "extends": "@vue/tsconfig/tsconfig.dom.json",
 ```
 
 ```ts
