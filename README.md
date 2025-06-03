@@ -232,6 +232,18 @@ export default defineConfig({
 });
 ```
 
+```markdown
+需要在 tsconfig.app.json 中配置别名的原因
+
+1. tsconfig.json，在使用 Project References 模式时，主 tsconfig.json 的 compilerOptions 配置会被忽略，其只作为项目的协调器，真正的编译配置来自被引用的子配置文件。
+
+2. tsconfig.node.json 只负责编译 vite.config.ts（tsconfig.node.json 配置 "include: ['vite.config.ts']"），而 vite.config.ts 没有导入 src/\* 下的文件。
+
+3. tsconfig.app.json 配置 `include: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.vue']`, 在此配置文件中的配置能正确应用到 `src` 文件夹下的文件。
+
+总的来说，是作用范围的问题 "include"，范围没有包含的文件，就不会生效。
+```
+
 #### 2.5 自动化生成语义化版本
 
 添加配置文件 `.releaserc`，其在`main/master`分支上生成的版本格式为`v1.0.0`，在`develop`分支上生成的版本格式为`v1.0.0-develop.1`
